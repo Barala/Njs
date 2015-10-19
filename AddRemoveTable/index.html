@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Add&Remove</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js "></script>
+	<script src="scripts/app.js"></script>"></script>
+</head>
+<body ng-controller="CompanyCtrl">
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>Employees</th>
+		<th>Head Office</th>
+		<th>Action</th>
+	</tr>
+	<tr ng-repeat="compnay in compnaies">
+		<td>{{company.name}}</td>
+		<td>{{company.employees}}</td>
+		<td>{{company.headOffice}}</td>
+		<td><input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)"/></td>
+	</tr>
+	
+</table>
+</body>
+</html>
